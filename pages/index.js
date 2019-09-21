@@ -1,13 +1,9 @@
-// This is the Link API
-import Link from 'next/link';
+// pages/index.js
 
-const Index = () => (
-  <div>
-    <Link href="/about">
-      <a title="About Page">About Page</a>
-    </Link>
-    <p>Hello Next.js</p>
-  </div>
-);
+import Layout from '../components/MyLayout.js';
 
-export default Index;
+const indexPageContent = <p>Hello Next.js</p>;
+
+export default function Index() {
+  return <Layout content={indexPageContent} />;
+}
